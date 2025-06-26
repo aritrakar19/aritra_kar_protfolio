@@ -49,12 +49,6 @@ const HeroContent = () => {
           I build responsive and scalable websites using modern tech like React, Next.js, and Node.js, delivering fast, user-friendly, and maintainable web solutions.
         </motion.p>
 
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 px-6 button-primary text-white bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg text-sm sm:text-base"
-        >
-          Learn More!
-        </motion.a>
 
         {/* Image only for mobile view */}
         <motion.div
