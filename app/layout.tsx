@@ -27,9 +27,7 @@ export default function RootLayout({
       >
         <StarsCanvas />
         <Navbar />
-        <Hero />
-        <Skills />
-        <Projects />
+        {children}
         <Footer />
       </body>
     </html>
