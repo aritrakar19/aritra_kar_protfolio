@@ -11,8 +11,14 @@ interface Props {
 }
 
 const ProjectCard = ({ src, title, description, link }: Props) => {
+  console.log(`ProjectCard rendered with link: ${link}`);
+  
   const handleClick = () => {
+    console.log('11');
+    
     if (link) {
+      console.log(`Opening link: ${link}`);
+      
       window.open(link, "_blank");
     } else {
       alert("No link provided");
@@ -29,13 +35,13 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
         className="w-full h-[250px] object-cover"
       />
 
-      <div className="relative p-4 z-10">
+      <div className="relative p-4 z-10 cursor-pointer">
         <h1 className="text-2xl font-semibold text-white">{title}</h1>
         <p className="mt-2 text-gray-300">{description}</p>
 
         <button
           onClick={handleClick}
-          className="mt-4 px-5 py-2 rounded-md border border-blue-500 text-white hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-blue-500/50"
+          className="cursor-pointer mt-4 px-5 py-2 rounded-md border border-blue-500 text-white hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-blue-500/50"
         >
           View Demo
         </button>
